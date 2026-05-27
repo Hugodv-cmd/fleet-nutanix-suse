@@ -17,7 +17,7 @@ spec:
       #   - name: github-registry-credentials
       containers:
       - name: web
-        image: ghcr.io/<your-github-username>/<your-repo-name>:latest
+        image: ghcr.io/hugodv-cmd/fleet-nutanix-suse:latest
         ports:
         - containerPort: 8080
         env:
