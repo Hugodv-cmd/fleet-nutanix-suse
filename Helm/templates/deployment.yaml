@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      # Uncomment below if your GitHub Container Registry package is private
+      # imagePullSecrets:
+      #   - name: github-registry-credentials
+      containers:
+      - name: web
+        image: ghcr.io/<your-github-username>/<your-repo-name>:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: CLUSTER_NAME
+          value: {{ .Values.clusterName | quote }}
