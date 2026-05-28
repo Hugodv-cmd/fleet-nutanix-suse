@@ -2,4 +2,4 @@ defaultNamespace: demo-app
 
 helm:
   values:
-    hypervisor: '${ get .ClusterLabels "management.cattle.io/hypervisor" }'
+    hypervisor: '${ get .ClusterLabels "hypervisor" }'
