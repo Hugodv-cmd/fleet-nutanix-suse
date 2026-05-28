@@ -18,6 +18,7 @@ spec:
       containers:
       - name: web
         image: ghcr.io/hugodv-cmd/fleet-nutanix-suse:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
