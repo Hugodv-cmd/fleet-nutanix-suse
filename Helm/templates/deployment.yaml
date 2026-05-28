@@ -21,5 +21,5 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: CLUSTER_NAME
-          value: {{ .Values.clusterName | quote }}
+        - name: HYPERVISOR
+          value: {{ .Values.hypervisor | quote }}
