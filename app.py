@@ -6,8 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():
     hypervisor = os.getenv('HYPERVISOR', 'Unknown Hypervisor')
-    
-    # Returning a fully styled HTML page
     return f"""
     <!DOCTYPE html>
     <html>
