@@ -2,7 +2,7 @@ defaultNamespace: default
 
 helm:
   values:
-    clusterName: "Generic Fleet Cluster"
+    clusterName: '${ get .ClusterLabels "management.cattle.io/cluster-display-name" }'
 
 targetCustomizations:
   - name: development-clusters
