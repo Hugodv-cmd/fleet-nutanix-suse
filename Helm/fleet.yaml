@@ -1,22 +1,5 @@
-defaultNamespace: default
+defaultNamespace: demo-app
 
 helm:
   values:
     clusterName: '${ get .ClusterLabels "management.cattle.io/cluster-display-name" }'
-
-targetCustomizations:
-  - name: development-clusters
-    clusterSelector:
-      matchLabels:
-        environment: dev
-    helm:
-      values:
-        clusterName: "US-West-Dev-Cluster"
-
-  - name: production-clusters
-    clusterSelector:
-      matchLabels:
-        environment: prod
-    helm:
-      values:
-        clusterName: "EU-Central-Production-Cluster"
