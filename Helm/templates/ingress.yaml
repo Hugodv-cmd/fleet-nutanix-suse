@@ -4,7 +4,7 @@ metadata:
   name: hello-world-ingress
   annotations:
     # Optional: If you are using RKE2's default NGINX ingress controller
-    kubernetes.io/ingress.class: "nginx"
+    # kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: {{ .Values.ingressHost | quote }}  # Fleet will dynamically inject this per cluster
